@@ -1,9 +1,9 @@
 import { createContext } from "react";
 
 const Context = createContext({
-    auth: false,
+    auth: localStorage.getItem('auth'),
     setAuth: () => { },
-    user: {},
+    user: JSON.parse(localStorage.getItem('user')),
     setUser: () => { }
 })
 

@@ -1,6 +1,6 @@
 import "./style.css";
-import { useState, useEffect } from "react";
-import { Avatar } from "@mui/material";
+import { useState, useEffect, useContext } from "react";
+import { useNavigate } from 'react-router-dom'
 import OrangeLogo from "../../svg/OrangeLogo";
 import IconButton from '@mui/material/IconButton';
 // Icones do MATERIAL ICONS
@@ -8,13 +8,19 @@ import IconButton from '@mui/material/IconButton';
 import Skeleton from '@mui/material/Skeleton';
 import HomeIcon from "@mui/icons-material/Home"
 import Settings from "@mui/icons-material/Settings";
+import ExitToApp from "@mui/icons-material/ExitToApp";
 import School from "@mui/icons-material/School";
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
+import Context from '../../../../contexts/Context'
+
 export default function LeftBar () {
+
+  const { setAuth, setUser } = useContext(Context)
+  const navigate = useNavigate()
 
   const [svgStyle, setSvgStyle] = useState("svg");
   const [leftBarStyle, setLeftBarStyle] = useState("leftBar");
@@ -43,6 +49,15 @@ export default function LeftBar () {
       setIsLoading(false);
     }, 2800)
   }, [])
+
+  function handleExit() {
+    setAuth(null)
+    setUser(null)
+
+    localStorage.clear()
+
+    navigate('/')
+  }
 
 
   return (
@@ -157,6 +172,19 @@ export default function LeftBar () {
               <>
                 <Settings sx={{ width: 28, height: 28, color:"white" }} />
                 <p>Averiguação do sistema</p>
+              </>
+            )}
+            { /*  */ }
+            
+          </div>
+
+          <div className="iconDiv" onClick={handleExit}>
+            {isLoading ? (
+              <Skeleton variant="circular"  sx={{ bgcolor: '#310A6E', marginTop:'2.3rem'  }} width={28} height={28} />
+            ) : (
+              <>
+                <ExitToApp sx={{ width: 28, height: 28, color:"white" }} />
+                <p>Sair</p>
               </>
             )}
             { /*  */ }

@@ -5,6 +5,8 @@ import computer from "../../_assets/js/computer.json";
 
 import { ArrowSquareRight } from "phosphor-react";
 import { useNavigate } from "react-router";
+import { useContext } from 'react'
+import Context from '../../contexts/Context';
 
 export function Main() {
   const defaultOptions = {
@@ -12,6 +14,9 @@ export function Main() {
     autoplay: true,
     animationData: computer,
   };
+  
+  const { auth, user } = useContext(Context)
+
 
   const navigate = useNavigate()
 
@@ -25,7 +30,7 @@ export function Main() {
         <div className="mainContent">
           <div className="content-left">
             <div className="title">
-              <h1>Bem vindo! Thiago</h1>
+              <h1>Bem vindo! {user.nome} </h1>
               <h1>
                 <span>Sentry Gate</span>
               </h1>

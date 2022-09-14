@@ -6,7 +6,7 @@ const PrivateRoute = ({ children, redirectTo }) => {
     const { auth } = useContext(Context)
     const navigate = useNavigate()
 
-    return auth === true ? children : <Navigate to={redirectTo} />
+    return auth ? children : <Navigate to={redirectTo} />
 }
 
 export default PrivateRoute

@@ -10,7 +10,7 @@ app.use(cors());
 const db = mysql.createPool({
     host: "localhost",
     user: "root",
-    password: "HorusCN",
+    password: "",
     database: "sentrygate",
 });
 

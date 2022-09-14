@@ -1,0 +1,193 @@
+.insertContainer {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+
+ margin-top: 5rem;
+}
+
+.stepInsert .button {
+ border: 1px solid #212121;
+ cursor: pointer;
+ border-radius: 0.5rem;
+ padding: .5rem;
+ text-align: center;
+}
+
+.insertForm {
+ min-width: 30rem;
+ background-color: #fff;
+
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-between;
+ gap: 2rem;
+
+ border-radius: 0.8rem;
+}
+
+.insertForm .titleInsert p {
+ margin-top: 2rem;
+}
+
+.insertForm .formClass {
+ width: 100%;
+ padding: 0 2rem 2rem 2rem
+}
+
+.stepInsert {
+ width: 70rem;
+ display: grid;
+ grid-template-columns: 65% 35%;
+ padding-left: 3rem
+}
+
+.containerInsert {
+ width: 100%;
+ padding-top: 2rem;
+}
+
+.infoAluno {
+ height: 8.5rem;
+ width: 100%;
+ display: flex;
+ gap: 2rem;
+ justify-content: center;
+}
+
+.userAluno {
+ height: 100%;
+ display: flex;
+ align-items: end;
+ gap: 1rem
+}
+
+.nameAluno p {
+ word-break: keep-all;
+}
+
+.nameAluno {
+ max-width: 10rem;
+
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+
+ overflow: hidden;
+ text-overflow: ellipsis;
+}
+
+.typeAvaliacao {
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ justify-content: space-between;
+ gap: 2rem;
+}
+
+.classButton {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+
+ gap: 2rem;
+ text-align: center
+}
+
+.insertNota {
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 2rem
+}
+
+.inputInsert {
+ width: 90%;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-template-row: 1fr 1fr;
+ gap: 1rem;
+ margin-top: 2rem;
+}
+
+.classInput {
+ height: 3rem;
+ display: flex;
+ gap: 1rem
+}
+
+.inputInsert input {
+ height: 100%;
+ width: 70%;
+ background-color: #FFFFFF;
+ border: 1px solid #212121;
+ color: black
+}
+
+.notaAtivity {
+ width: 30%;
+ height: 100%;
+ border-radius: 0.5rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border: 1px solid #212121;
+ cursor: pointer;
+}
+
+.notaAtivity input {
+ width: 100%;
+ border: none
+}
+
+.buttonSubmit {
+ height: 3rem;
+ width: 90%;
+ background-color: #f9943b;
+ cursor: pointer;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 0.5rem;
+}
+
+.switchAluno {
+ border-left: 1px solid #212121;
+}
+
+.filterAluno {
+ display: flex;
+ gap: 2rem;
+ padding: 0 1rem 0 1rem;
+ align-items: center;
+}
+
+.filterAluno input {
+ background-color: #FFF;
+ border: 1px solid #212121;
+ color: black
+}
+
+.listAluno {
+ display: flex;
+ flex-direction: column;
+}
+
+.boxAluno {
+ width: 100%;
+ height: 100%;
+ border-top: 1px solid #212121;
+ padding: 1rem 1rem;
+
+ display: flex;
+ align-items: center;
+ gap: 1rem;
+ cursor: pointer;
+ transition: 0.4s;
+}
+
+.boxAluno:hover {
+ background-color: #e9e9e9
+}
